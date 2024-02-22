@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+        content="CriticBench is a comprehensive benchmark designed to assess LLMs' abilities to critique and rectify their reasoning across a variety of tasks, curated by Tsinghua University">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CriticBench </title>
+    <link rel="icon" type="image/x-icon" href="static/images/criticbench_logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Related Research
+                    </a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="https://github.com/microsoft/ProphetNet/tree/master/CRITIC"
+                            target="_blank">
+                            <b>CRITIC 🤔🛠️🤖</b>
+                            <p style="font-size:20px; display: inline; margin-left: 5px;"></p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="column has-text-centered">
+                        <h1 class="title is-1 publication-title"> <img class="logo"
+                                src="static/images/criticbench_logo.png" alt="CriticBench Logo"> CriticBench: <br> Benchmarking LLMs for <u>Criti</u>que-<u>C</u> Reasoning
+                        </h1>
+                        <div class="is-size-5 publication-authors">
+                            <div class="author-block">
+                                <span><a href="https://github.com/chenzhiling9954" target="_blank">
+                                        Zicheng Lin</a></span><sup>1*</sup>,
+                                <span><a href="https://zubingou.github.io/" target="_blank">Zhibin
+                                        Gou</a></span><sup>1*</sup>,
+                                <span><a href="https://scholar.google.com/citations?hl=en&user=Z6bZcT4AAAAJ"
+                                        tartet="_blank">Tian Liang</a></span><sup>1</sup>
+                                <br>
+                                <span>Ruilin Luo</span><sup>1</sup>
+                                <span>Haowei Liu</span><sup>2</sup>
+                                <br>
+                                <span><a href="https://sites.google.com/view/iigroup-thu/about" tartet="_blank">Yujiu
+                                        Yang</a></span><sup>1&dagger;</sup>,
+                            </div>
+                            <!-- Paper authors -->
+                            <!-- <span class="author-block"> -->
+                            <!-- <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">x<sup>x</sup></a></span> -->
+                        </div>
+
+                        <div class="is-size-5 publication-authors">
+                            <span class="author-block"><sup>1</sup>Tsinghua University <sup>2</sup> University of Hong Kong </span>
+
+                            <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution
+                                    <sup>&dagger;</sup>Corresponding Author</small></span>
+                        </div>
+
+                        <div class="column has-text-centered">
+                            <div class="publication-links">
+                                <!-- Arxiv PDF link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/pdf/TODO.pdf" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fas fa-file-pdf"></i>
+                                        </span>
+                                        <span>Paper</span>
+                                    </a>
+                                </span>
+
+                                <!-- Github link -->
+                                <span class="link-block">
+                                    <a href="https://github.com/CriticBench/CriticBench" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>
+                                        </span>
+                                        <span>Code</span>
+                                    </a>
+                                </span>
+
+                                <!-- ArXiv abstract Link -->
+                                <span class="link-block">
+                                    <a href="https://arxiv.org/abs/TODO" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            <i class="ai ai-arxiv"></i>
+                                        </span>
+                                        <span>arXiv</span>
+                                    </a>
+                                </span>
+
+                                <span class="link-block">
+                                    <a href="https://huggingface.co/TODO" target="_blank"
+                                        class="external-link button is-normal is-rounded is-dark">
+                                        <span class="icon">
+                                            🤗
+                                        </span>
+                                        <span>Dataset</span>
+                                    </a>
+                                </span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- make it wider -->
+        </div>
+    </section>
+
+
+    <!-- Teaser video-->
+    <!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <source src="static/videos/banner_video.mp4"
+        type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      </h2>
+    </div>
+  </div>
+</section> -->
+    <!-- End teaser video -->
+
+
+    <!-- Paper abstract -->
+    <section class="section hero is-light">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered has-text-centered">
+                <div class="column is-four-fifths">
+                    <div class="content has-text-justified">
+                        <div class="content">
+                            <p style="font-size: 1.1em;">
+                                The ability of Large Language Models (LLMs) to critique and refine their reasoning is crucial for their application in evaluation, feedback provision, and self-improvement. This paper introduces <b>CriticBench, a comprehensive benchmark designed to assess LLMs' abilities to critique and rectify their reasoning across a variety of tasks</b>.
+                                CriticBench encompasses five reasoning domains: mathematical, commonsense, symbolic, coding, and algorithmic.
+                                It compiles 15 datasets and incorporates responses from three LLM families.
+                                Utilizing CriticBench, we evaluate and dissect the performance of 17 LLMs in generation, critique, and correction reasoning, i.e., GQC reasoning, and analyze the key factors affecting LLM critical reasoning.
+                                <br>
+                                Our findings reveal: (1) a linear relationship in GQC capabilities, with critique-focused training markedly enhancing performance; (2) a task-dependent variation in critique and correction effectiveness, with logic-oriented tasks being more amenable to correction; (3) GQC knowledge inconsistencies that decrease as model size increases; and
+                                (4) an intriguing inter-model critiquing pattern, where stronger models are better at critiquing weaker ones, while weaker models can surprisingly surpass stronger ones in their self-critique.
+                                <br>
+                                We hope these insights into the nuanced critique-correct reasoning of LLMs will foster further research in LLM critique and self-improvement
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- End paper abstract -->
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop is-centered">
+                <div class="container">
+                    <h2 class="title is-3 has-text-centered">CriticBench Curation</h2>
+                    <div class="item">
+                        <img src="static/images/overview.png" alt="MY ALT TEXT" />
+                        <h2 class="subtitle has-text-centered">
+                            Figure 1: An overview for CriticBench curation. 
+                        </h2>
+                    </div>
+                </div>
+                <p>
+                    CriticBench is a benchmark comprising five different domains to systematically assess critique and correction reasoning in various LLMs.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-small">
+        <div class="hero-body">
+            <div class="container is-max-desktop">
+                <div class="columns is-centered">
+                    <div class="container">
+                        <h2 class="title is-3 has-text-centered">RQ1: Key Factors in Critial Reasoning</h2>
+                        <div class="item">
+                            <img src="static/images/total_radar.png" alt="" />
+                            <h2 class="subtitle">
+                                Figure 2: TODO
+                            </h2>
+                        </div>
+                        <p>
+                            TODO
+                        </p>
+                        <div class="item">
+                            <!-- <img src="static/images/fig2.png" alt="MY ALT TEXT" /> -->
+                            <h2 class="subtitle">
+                                Table 1: TODO
+                            </h2>
+                        </div>
+                        <p>
+                            TODO
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+            <h2 class="title">BibTeX</h2>
+            <pre><code>@misc{lin2024criticbench,
+    title={CriticBench: Benchmarking LLMs for Critique-Correct Reasoning}, 
+    author={TODO},
+    year={2024},
+    eprint={2402.TODO},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}</code></pre>
+        </div>
+    </section>
+    <!--End BibTex citation -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+                    <div class="content">
+                        <p>
+                            This page was built using the <a
+                                href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                                href="https://nerfies.github.io" target="_blank">Nerfies</a>.
+                            <!-- You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative -->
+                            <!-- Commons Attribution-ShareAlike 4.0 International License</a>. -->
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Statcounter tracking code -->
+
+    <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+</body>
+
+</html>
